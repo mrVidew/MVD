@@ -366,10 +366,6 @@
             font-size: .9rem;
         }
 
-        .rgb {
-            font-weight: 900;
-            text-shadow: 2px 0 var(--red), -2px 0 var(--cyan);
-        }
 
         @media (max-width: 900px) {
             header {
@@ -436,6 +432,29 @@
             .section {
                 padding: 60px 6%;
             }
+            .gallery-btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 16px 32px;
+    color: #00f5ff;
+    border: 2px solid #00f5ff;
+    background: rgba(0, 245, 255, 0.05);
+    border-radius: 6px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-decoration: none;
+    transition: 0.3s;
+    box-shadow: 0 0 12px rgba(0, 245, 255, 0.2);
+}
+
+.gallery-btn:hover {
+    color: #030507;
+    background: #00f5ff;
+    box-shadow:
+        0 0 15px #00f5ff,
+        0 0 35px rgba(255, 20, 147, 0.5);
+    transform: translateY(-4px);
+}
         }
     </style>
 </head>
@@ -453,6 +472,7 @@
             <a class="active" href="index.html">HOME</a>
             <a href="about.html">ABOUT</a>
             <a href="projects.html">PROJECTS</a>
+            <a href="gallery.html">GALLERY</a>
             <a href="contact.html">CONTACT</a>
         </nav>
 
@@ -487,6 +507,7 @@
                     <a class="btn red" href="projects.html">▣ PROJECTS</a>
                     <a class="btn" href="contact.html">✉ CONTACT</a>
                 </div>
+                <a href="gallery.html" class="gallery-btn">🖼️ VIEW GALLERY</a>
             </div>
 
             <div class="hero-art">
@@ -529,7 +550,7 @@
     </main>
 
     <footer>
-        © 2026 <span class="rgb">MVD</span>
+        © 2026 MVD
     </footer>
 </body>
 </html>
