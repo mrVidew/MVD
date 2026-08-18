@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MVD | Gallery</title>
+<style>
+:root{--cyan:#00f5ff;--blue:#00aaff;--green:#39ff14;--red:#ff1744;--pink:#ff1493;--white:#f5f7ff;--muted:#9aa4b2;--bg:#030507}*{box-sizing:border-box;margin:0;padding:0}body{min-height:100vh;color:var(--white);background:radial-gradient(circle at 15% 20%,rgba(0,245,255,.10),transparent 28%),radial-gradient(circle at 85% 25%,rgba(255,23,68,.10),transparent 30%),var(--bg);font-family:Arial,Helvetica,sans-serif}body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:10;background:repeating-linear-gradient(to bottom,rgba(255,255,255,.018) 0 1px,transparent 2px 5px)}.top-line{height:3px;background:linear-gradient(90deg,var(--green),var(--cyan),var(--blue),var(--red),var(--pink),var(--green));box-shadow:0 0 20px rgba(0,245,255,.7)}header{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:12px 6%;background:rgba(3,5,7,.93);border-bottom:1px solid rgba(255,255,255,.12);backdrop-filter:blur(14px)}.brand{display:flex;align-items:center;gap:10px;color:var(--white);text-decoration:none;font-weight:900;font-size:1.4rem;letter-spacing:3px;text-shadow:2px 0 var(--red),-2px 0 var(--cyan)}.brand img{width:43px;height:43px;object-fit:contain;border-radius:50%}nav{display:flex;flex-wrap:wrap;justify-content:center;gap:6px}nav a{color:#dce4ee;text-decoration:none;padding:9px 11px;border:1px solid transparent;font-size:.8rem;letter-spacing:1px;transition:.25s}nav a:hover,nav a.active{color:var(--green);border-color:var(--green);box-shadow:0 0 14px rgba(57,255,20,.22)}main{max-width:1250px;margin:auto;padding:70px 6%}.subtitle{color:var(--cyan);font-weight:800;letter-spacing:3px;margin-bottom:12px}h1{font-size:clamp(3rem,8vw,6rem);letter-spacing:4px;margin-bottom:15px;text-shadow:3px 0 var(--red),-3px 0 var(--cyan)}.intro{max-width:750px;color:var(--muted);line-height:1.8;margin-bottom:45px}.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.card{overflow:hidden;border:1px solid rgba(0,245,255,.25);background:rgba(255,255,255,.025);border-radius:10px;transition:.3s}.card:hover{transform:translateY(-6px);border-color:var(--cyan);box-shadow:0 0 25px rgba(0,245,255,.14)}.card img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover;background:#05080c}.card-content{padding:17px}.card h2{font-size:1rem;margin-bottom:7px}.card p{color:var(--muted);font-size:.88rem;line-height:1.55}.tag{display:inline-block;margin-top:12px;padding:5px 9px;border:1px solid var(--green);color:var(--green);font-size:.68rem;letter-spacing:1px}footer{padding:30px 6%;text-align:center;color:#707a87;border-top:1px solid rgba(255,255,255,.1)}@media(max-width:900px){.gallery{grid-template-columns:repeat(2,1fr)}header{flex-wrap:wrap;justify-content:center}}@media(max-width:600px){.gallery{grid-template-columns:1fr}nav a{font-size:.68rem;padding:7px}main{padding:50px 5%}}
+</style>
+</head>
+<body>
+<div class="top-line"></div>
+<header>
+<a class="brand" href="index.html"><img src="MVD-logo.png" alt="MVD Logo"><span>MVD</span></a>
+<nav><a href="index.html">HOME</a><a href="about.html">ABOUT</a><a href="projects.html">PROJECTS</a><a class="active" href="gallery.html">GALLERY</a><a href="contact.html">CONTACT</a></nav>
+</header>
+<main>
+<div class="subtitle">VISUAL ARCHIVE // MVD</div>
+<h1>🖼️ GALLERY</h1>
+<p class="intro">Welcome to the MVD visual archive — a collection of logos, posters, designs, wallpapers and creative work created for the MVD brand and its projects.</p>
+<section class="gallery">
+<article class="card"><img src="MVD-logo.png" alt="MVD Logo"><div class="card-content"><h2>MVD Logo</h2><p>The main visual identity of MVD.</p><span class="tag">MVD BRAND</span></div></article>
+<article class="card"><img src="MVD-Design-01.png" alt="MVD Design #01"><div class="card-content"><h2>MVD Design #01</h2><p>MVD digital artwork and creative design.</p><span class="tag">DESIGN</span></div></article>
+<article class="card"><img src="MVD-Poster.png" alt="MVD Poster"><div class="card-content"><h2>MVD Poster</h2><p>An MVD poster design created for the visual archive.</p><span class="tag">POSTER</span></div></article>
+<article class="card"><img src="MVD-Wallpaper.png" alt="MVD Wallpaper"><div class="card-content"><h2>MVD Wallpaper</h2><p>A wallpaper design created for the MVD brand.</p><span class="tag">WALLPAPER</span></div></article>
+<article class="card"><img src="Project-MVD.png" alt="Project MVD"><div class="card-content"><h2>Project MVD</h2><p>Visual artwork connected to Project MVD.</p><span class="tag">PROJECT</span></div></article>
+<article class="card"><img src="More-MVD.png" alt="More MVD"><div class="card-content"><h2>More MVD</h2><p>More creative work from the MVD visual archive.</p><span class="tag">MVD</span></div></article>
+</section>
+</main>
+<footer>© 2026 MVD</footer>
+</body>
+</html>
