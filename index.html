@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MVD — Unknown // Unreadable // Unstoppable. A creative technology and digital projects portfolio.">
+    <title>MVD | Unknown // Unreadable // Unstoppable</title>
+
+    <style>
+        :root {
+            --cyan: #00f5ff;
+            --blue: #00aaff;
+            --green: #39ff14;
+            --red: #ff1744;
+            --pink: #ff1493;
+            --white: #f5f7ff;
+            --muted: #9aa4b2;
+            --bg: #030507;
+            --panel: rgba(8, 12, 18, 0.82);
+            --line: rgba(0, 245, 255, 0.25);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            min-height: 100vh;
+            color: var(--white);
+            background:
+                radial-gradient(circle at 75% 25%, rgba(255, 0, 60, 0.12), transparent 30%),
+                radial-gradient(circle at 25% 35%, rgba(0, 245, 255, 0.10), transparent 32%),
+                #030507;
+            font-family: Arial, Helvetica, sans-serif;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 20;
+            background: repeating-linear-gradient(
+                to bottom,
+                rgba(255,255,255,0.018) 0px,
+                rgba(255,255,255,0.018) 1px,
+                transparent 2px,
+                transparent 5px
+            );
+            opacity: 0.45;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .top-line {
+            height: 2px;
+            background: linear-gradient(90deg, var(--green), var(--cyan), var(--red), var(--pink), var(--green));
+            box-shadow: 0 0 18px rgba(0,245,255,.7);
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 15;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+            padding: 14px 6%;
+            background: rgba(3, 5, 7, 0.9);
+            border-bottom: 1px solid rgba(255,255,255,.12);
+            backdrop-filter: blur(14px);
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 900;
+            letter-spacing: 3px;
+            font-size: 1.45rem;
+            text-shadow: 2px 0 var(--red), -2px 0 var(--cyan);
+        }
+
+        .brand img {
+            width: 44px;
+            height: 44px;
+            object-fit: contain;
+            border-radius: 50%;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        nav a {
+            padding: 9px 13px;
+            border: 1px solid transparent;
+            color: #dce4ee;
+            font-size: .86rem;
+            letter-spacing: 1px;
+            transition: .25s ease;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: var(--green);
+            border-color: var(--green);
+            box-shadow: 0 0 14px rgba(57,255,20,.22);
+        }
+
+        .social-mini {
+            display: flex;
+            gap: 7px;
+        }
+
+        .social-mini a {
+            width: 34px;
+            height: 34px;
+            display: grid;
+            place-items: center;
+            border: 1px solid rgba(0,245,255,.45);
+            border-radius: 6px;
+            font-size: .78rem;
+            transition: .25s;
+        }
+
+        .social-mini a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 15px rgba(0,245,255,.35);
+        }
+
+        .hero {
+            min-height: calc(100vh - 75px);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 30px;
+            padding: 70px 8%;
+            position: relative;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            width: 45%;
+            height: 1px;
+            right: 8%;
+            top: 22%;
+            background: linear-gradient(90deg, transparent, var(--red), transparent);
+            box-shadow: 0 0 12px var(--red);
+        }
+
+        .eyebrow {
+            color: var(--cyan);
+            letter-spacing: 5px;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .hero h1 {
+            font-size: clamp(5rem, 12vw, 10rem);
+            line-height: .78;
+            letter-spacing: 8px;
+            font-weight: 1000;
+            text-shadow:
+                5px 0 var(--red),
+                -5px 0 var(--cyan),
+                0 0 35px rgba(255,255,255,.12);
+            animation: glitch 3.5s infinite steps(1);
+        }
+
+        @keyframes glitch {
+            0%, 92%, 100% { transform: translate(0); }
+            93% { transform: translate(4px, -2px); }
+            94% { transform: translate(-5px, 2px); }
+            95% { transform: translate(2px, 0); }
+        }
+
+        .motto {
+            margin-top: 28px;
+            font-size: clamp(1rem, 2vw, 1.35rem);
+            font-weight: 800;
+            letter-spacing: 1.5px;
+        }
+
+        .motto span:nth-child(1) { color: var(--green); }
+        .motto span:nth-child(2) { color: var(--cyan); }
+        .motto span:nth-child(3) { color: var(--red); }
+
+        .hero-description {
+            max-width: 650px;
+            margin-top: 22px;
+            color: var(--muted);
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 30px;
+        }
+
+        .btn {
+            padding: 13px 20px;
+            border: 1px solid var(--cyan);
+            color: var(--cyan);
+            background: rgba(0, 245, 255, .035);
+            border-radius: 5px;
+            font-weight: 800;
+            letter-spacing: .7px;
+            transition: .25s ease;
+        }
+
+        .btn:hover {
+            color: #030507;
+            background: var(--cyan);
+            box-shadow: 0 0 24px rgba(0,245,255,.55);
+            transform: translateY(-2px);
+        }
+
+        .btn.green {
+            border-color: var(--green);
+            color: var(--green);
+        }
+
+        .btn.green:hover {
+            background: var(--green);
+            box-shadow: 0 0 24px rgba(57,255,20,.45);
+        }
+
+        .btn.red {
+            border-color: var(--red);
+            color: var(--red);
+        }
+
+        .btn.red:hover {
+            background: var(--red);
+            box-shadow: 0 0 24px rgba(255,23,68,.45);
+        }
+
+        .hero-art {
+            min-height: 500px;
+            display: grid;
+            place-items: center;
+            position: relative;
+        }
+
+        .hero-art::before {
+            content: "";
+            position: absolute;
+            width: 85%;
+            height: 85%;
+            background:
+                linear-gradient(90deg, transparent 48%, rgba(0,245,255,.35) 49%, transparent 50%),
+                linear-gradient(0deg, transparent 48%, rgba(255,23,68,.25) 49%, transparent 50%);
+            opacity: .3;
+            mask-image: radial-gradient(circle, black, transparent 68%);
+        }
+
+        .hero-logo {
+            position: relative;
+            width: min(90%, 560px);
+            max-height: 560px;
+            object-fit: contain;
+            filter:
+                drop-shadow(-14px 0 0 rgba(0,245,255,.28))
+                drop-shadow(14px 0 0 rgba(255,23,68,.28))
+                drop-shadow(0 0 28px rgba(0,245,255,.15));
+            animation: float 5s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-9px); }
+        }
+
+        .section {
+            padding: 80px 8%;
+            border-top: 1px solid rgba(255,255,255,.08);
+        }
+
+        .section h2 {
+            margin-bottom: 14px;
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            letter-spacing: 2px;
+            text-shadow: 2px 0 var(--red), -2px 0 var(--cyan);
+        }
+
+        .section p {
+            max-width: 800px;
+            color: var(--muted);
+            line-height: 1.8;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            margin-top: 30px;
+        }
+
+        .card {
+            padding: 25px;
+            background: var(--panel);
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            transition: .25s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--cyan);
+            box-shadow: 0 0 24px rgba(0,245,255,.13);
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            color: var(--cyan);
+        }
+
+        .social-panel {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 28px;
+        }
+
+        .social-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            padding: 13px 18px;
+            border: 1px solid rgba(255,255,255,.2);
+            border-radius: 6px;
+            background: rgba(255,255,255,.025);
+            transition: .25s;
+        }
+
+        .social-button:hover {
+            transform: translateY(-3px);
+            border-color: var(--pink);
+            box-shadow: 0 0 20px rgba(255,20,147,.25);
+        }
+
+        footer {
+            padding: 28px 8%;
+            text-align: center;
+            color: #707a87;
+            border-top: 1px solid rgba(255,255,255,.1);
+            font-size: .9rem;
+        }
+
+        .rgb {
+            font-weight: 900;
+            text-shadow: 2px 0 var(--red), -2px 0 var(--cyan);
+        }
+
+        @media (max-width: 900px) {
+            header {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+                text-align: center;
+                padding-top: 55px;
+            }
+
+            .hero-description {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .buttons,
+            .social-panel {
+                justify-content: center;
+            }
+
+            .hero-art {
+                min-height: 380px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            header {
+                padding: 12px 4%;
+            }
+
+            .social-mini {
+                display: none;
+            }
+
+            nav {
+                width: 100%;
+            }
+
+            nav a {
+                padding: 7px 9px;
+                font-size: .74rem;
+            }
+
+            .hero {
+                padding: 50px 6%;
+            }
+
+            .hero h1 {
+                font-size: 5rem;
+                letter-spacing: 3px;
+            }
+
+            .hero-art {
+                min-height: 300px;
+            }
+
+            .section {
+                padding: 60px 6%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top-line"></div>
+
+    <header>
+        <a class="brand" href="index.html" aria-label="MVD Home">
+            <img src="MVD-logo.png" alt="MVD logo">
+            <span>MVD</span>
+        </a>
+
+        <nav aria-label="Main navigation">
+            <a class="active" href="index.html">HOME</a>
+            <a href="about.html">ABOUT</a>
+            <a href="projects.html">PROJECTS</a>
+            <a href="contact.html">CONTACT</a>
+        </nav>
+
+        <div class="social-mini">
+            <a href="https://www.tiktok.com/@videw_dintharu" target="_blank" rel="noopener" aria-label="TikTok">TT</a>
+            <a href="https://www.instagram.com/it_z_videw" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+            <a href="https://github.com/mrVidew" target="_blank" rel="noopener" aria-label="GitHub">GH</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div>
+                <div class="eyebrow">WELCOME TO</div>
+                <h1>MVD</h1>
+
+                <div class="motto">
+                    <span>UNKNOWN</span> //
+                    <span>UNREADABLE</span> //
+                    <span>UNSTOPPABLE</span>
+                </div>
+
+                <p class="hero-description">
+                    MVD is a personal creative identity built around technology,
+                    designing, computers, software, digital creativity and
+                    future-focused projects. Think. Create. Improve. Dominate.
+                </p>
+
+                <div class="buttons">
+                    <a class="btn green" href="index.html">⌂ HOME</a>
+                    <a class="btn" href="about.html">◉ ABOUT</a>
+                    <a class="btn red" href="projects.html">▣ PROJECTS</a>
+                    <a class="btn" href="contact.html">✉ CONTACT</a>
+                </div>
+            </div>
+
+            <div class="hero-art">
+                <!-- Upload your logo to the repository with this exact filename: MVD-logo.png -->
+                <img class="hero-logo" src="MVD-logo.png" alt="MVD logo">
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>THE MVD IDENTITY</h2>
+            <p>
+                A digital space for ideas, experiments, projects and creativity.
+                The site uses the RGB colors from the MVD logo—cyan, green,
+                red, pink, white and deep black—to create a glitch-inspired identity.
+            </p>
+
+            <div class="cards">
+                <div class="card">
+                    <h3>01 // CREATE</h3>
+                    <p>Turn ideas into real digital creations and designs.</p>
+                </div>
+
+                <div class="card">
+                    <h3>02 // BUILD</h3>
+                    <p>Learn technology, software and development by building.</p>
+                </div>
+
+                <div class="card">
+                    <h3>03 // IMPROVE</h3>
+                    <p>Keep learning, keep experimenting and keep moving forward.</p>
+                </div>
+            </div>
+
+            <div class="social-panel">
+                <a class="social-button" href="https://www.tiktok.com/@videw_dintharu" target="_blank" rel="noopener">♪ TikTok</a>
+                <a class="social-button" href="https://www.instagram.com/it_z_videw" target="_blank" rel="noopener">◎ Instagram</a>
+                <a class="social-button" href="https://github.com/mrVidew" target="_blank" rel="noopener">⌘ GitHub</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        © 2026 <span class="rgb">MVD</span>
+    </footer>
+</body>
+</html>

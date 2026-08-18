@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MVD | Projects</title><style>
+:root {
+    --cyan:#00f5ff; --blue:#00aaff; --green:#39ff14;
+    --red:#ff1744; --pink:#ff1493; --white:#f5f7ff;
+    --muted:#9aa4b2; --bg:#030507; --panel:rgba(8,12,18,.86);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+    min-height:100vh;color:var(--white);background:
+    radial-gradient(circle at 15% 25%,rgba(0,245,255,.10),transparent 28%),
+    radial-gradient(circle at 85% 30%,rgba(255,23,68,.10),transparent 30%),
+    #030507;font-family:Arial,Helvetica,sans-serif;overflow-x:hidden;
+}
+body::before{
+    content:"";position:fixed;inset:0;pointer-events:none;z-index:20;
+    background:repeating-linear-gradient(to bottom,rgba(255,255,255,.018) 0 1px,transparent 2px 5px);
+    opacity:.42;
+}
+a{color:inherit;text-decoration:none}
+.top-line{height:2px;background:linear-gradient(90deg,var(--green),var(--cyan),var(--red),var(--pink),var(--green));box-shadow:0 0 18px rgba(0,245,255,.7)}
+header{
+    position:sticky;top:0;z-index:15;display:flex;align-items:center;
+    justify-content:space-between;gap:20px;padding:13px 6%;
+    background:rgba(3,5,7,.92);border-bottom:1px solid rgba(255,255,255,.12);
+    backdrop-filter:blur(14px);
+}
+.brand{display:flex;align-items:center;gap:11px;font-weight:900;letter-spacing:3px;font-size:1.4rem;text-shadow:2px 0 var(--red),-2px 0 var(--cyan)}
+.brand img{width:43px;height:43px;object-fit:contain;border-radius:50%}
+nav{display:flex;flex-wrap:wrap;justify-content:center;gap:7px}
+nav a{padding:9px 12px;border:1px solid transparent;color:#dce4ee;font-size:.82rem;letter-spacing:1px;transition:.25s}
+nav a:hover,nav a.active{color:var(--green);border-color:var(--green);box-shadow:0 0 14px rgba(57,255,20,.22)}
+.social-mini{display:flex;gap:7px}
+.social-mini a{width:34px;height:34px;display:grid;place-items:center;border:1px solid rgba(0,245,255,.45);border-radius:6px;font-size:.72rem;transition:.25s}
+.social-mini a:hover{box-shadow:0 0 15px rgba(0,245,255,.35);transform:translateY(-2px)}
+main{padding:70px 8%;min-height:calc(100vh - 120px)}
+.page-title{font-size:clamp(2.8rem,7vw,5.5rem);letter-spacing:3px;text-shadow:3px 0 var(--red),-3px 0 var(--cyan);margin-bottom:12px}
+.subtitle{color:var(--cyan);font-weight:800;letter-spacing:3px;margin-bottom:34px}
+.panel{
+    max-width:1050px;padding:30px;background:var(--panel);
+    border:1px solid rgba(0,245,255,.28);border-radius:10px;
+    box-shadow:0 0 35px rgba(0,245,255,.06);
+}
+.panel p{color:var(--muted);line-height:1.85;margin-bottom:18px}
+.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:25px 0}
+.info{
+    padding:18px;border:1px solid rgba(255,255,255,.13);
+    border-left:3px solid var(--cyan);background:rgba(255,255,255,.025);
+}
+.info strong{color:var(--white)} .info span{color:var(--cyan)}
+.mindset{
+    margin-top:25px;padding:22px;border:1px solid rgba(57,255,20,.4);
+    background:rgba(57,255,20,.025);line-height:2;
+}
+.mindset b:first-child{color:var(--green)} .mindset b:last-child{color:var(--red)}
+.socials{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.social-btn{
+    display:inline-flex;align-items:center;gap:8px;padding:13px 18px;
+    border:1px solid rgba(255,255,255,.2);border-radius:6px;
+    background:rgba(255,255,255,.025);transition:.25s;
+}
+.social-btn:hover{transform:translateY(-3px);border-color:var(--pink);box-shadow:0 0 20px rgba(255,20,147,.25)}
+.project-card{
+    padding:28px;border:1px solid rgba(255,23,68,.45);
+    background:rgba(255,23,68,.025);border-radius:10px;
+}
+.project-card h2{color:var(--red);margin-bottom:16px;text-shadow:2px 0 var(--cyan)}
+.project-card ul{list-style:none;margin-top:18px}
+.project-card li{color:var(--muted);padding:8px 0}
+.project-card li::before{content:"✓ ";color:var(--green);font-weight:bold}
+.quote{
+    margin-top:25px;padding:20px;text-align:center;
+    border:1px solid rgba(0,245,255,.35);color:var(--cyan);
+    letter-spacing:1px;font-weight:800;
+}
+.contact-grid{display:grid;gap:15px;margin-top:20px}
+.contact-card{
+    display:flex;align-items:center;justify-content:space-between;gap:20px;
+    padding:20px;border:1px solid rgba(0,245,255,.22);
+    background:rgba(255,255,255,.025);border-radius:8px;
+}
+.contact-card h3{color:var(--cyan);margin-bottom:5px}
+.contact-card p{margin:0;color:var(--muted)}
+.action{
+    padding:10px 15px;border:1px solid var(--cyan);color:var(--cyan);
+    border-radius:5px;white-space:nowrap;font-weight:700;transition:.25s;
+}
+.action:hover{background:var(--cyan);color:#030507;box-shadow:0 0 18px rgba(0,245,255,.4)}
+footer{padding:28px 8%;text-align:center;color:#707a87;border-top:1px solid rgba(255,255,255,.1);font-size:.9rem}
+.rgb{font-weight:900;text-shadow:2px 0 var(--red),-2px 0 var(--cyan)}
+@media(max-width:800px){
+    header{flex-wrap:wrap;justify-content:center}
+    .social-mini{display:none}
+    main{padding:55px 6%}
+    .info-grid{grid-template-columns:1fr}
+    .contact-card{align-items:flex-start;flex-direction:column}
+}
+@media(max-width:600px){
+    nav a{padding:7px 8px;font-size:.7rem}
+    .page-title{font-size:3rem}
+}
+</style>
+</head>
+<body>
+<div class="top-line"></div>
+<header>
+    <a class="brand" href="index.html">
+        <img src="MVD-logo.png" alt="MVD logo">
+        <span>MVD</span>
+    </a>
+    <nav aria-label="Main navigation">
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="projects.html">PROJECTS</a>
+        <a href="contact.html">CONTACT</a>
+    </nav>
+    <div class="social-mini">
+        <a href="https://www.tiktok.com/@videw_dintharu" target="_blank" rel="noopener">TT</a>
+        <a href="https://www.instagram.com/it_z_videw" target="_blank" rel="noopener">IG</a>
+        <a href="https://github.com/mrVidew" target="_blank" rel="noopener">GH</a>
+    </div>
+</header>
+
+<main>
+    <div class="subtitle">PROJECT ARCHIVE // MVD</div>
+    <h1 class="page-title">🚀 PROJECTS 🚀</h1>
+    <section class="panel">
+        <div class="project-card">
+            <h2>MISSION O/L A9 — FROM PROJECT MVD</h2>
+            <p><strong>Mission O/L A9</strong> is an academic project created under Project MVD, focused on preparation, consistency, smart planning and achieving an A9 goal in the G.C.E. O/L examination.</p>
+            <p>The project combines study planning with subject tracking, practice, motivation and progress monitoring. Its purpose is to turn a big goal into a structured mission that can be worked on every day.</p>
+            <ul>
+                <li>Daily study plans</li>
+                <li>Subject trackers</li>
+                <li>Past-paper practice</li>
+                <li>Motivation and mindset</li>
+                <li>Progress tracking</li>
+            </ul>
+        </div>
+        <div class="quote">“FOCUS TODAY. A9 TOMORROW.”</div>
+    </section>
+</main><footer>© 2026 <span class="rgb">MVD</span></footer></body></html>
