@@ -1,54 +1,1255 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="MVD — Unknown // Unreadable // Unstoppable. A creative technology and digital projects portfolio.">
-<title>MVD | Unknown // Unreadable // Unstoppable</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-K0PM400KTY"></script>
-<script>
-window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-K0PM400KTY');
-</script>
+    <meta name="description"
+        content="MVD — Unknown // Unreadable // Unstoppable. A creative technology and digital projects portfolio.">
 
-<style>
-:root{--cyan:#00f5ff;--blue:#00aaff;--green:#39ff14;--red:#ff1744;--pink:#ff1493;--white:#f5f7ff;--muted:#9aa4b2;--bg:#030507;--panel:rgba(8,12,18,.82);--line:rgba(0,245,255,.25)}
-*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{min-height:100vh;color:var(--white);background:radial-gradient(circle at 75% 25%,rgba(255,0,60,.12),transparent 30%),radial-gradient(circle at 25% 35%,rgba(0,245,255,.10),transparent 32%),#030507;font-family:Arial,Helvetica,sans-serif;overflow-x:hidden}
-body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:20;background:repeating-linear-gradient(to bottom,rgba(255,255,255,.018) 0,rgba(255,255,255,.018) 1px,transparent 2px,transparent 5px);opacity:.45}a{color:inherit;text-decoration:none}
-.top-line{height:2px;background:linear-gradient(90deg,var(--green),var(--cyan),var(--red),var(--pink),var(--green));box-shadow:0 0 18px rgba(0,245,255,.7)}
-header{position:sticky;top:0;z-index:15;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:14px 6%;background:rgba(3,5,7,.9);border-bottom:1px solid rgba(255,255,255,.12);backdrop-filter:blur(14px)}
-.brand{display:flex;align-items:center;gap:12px;font-weight:900;letter-spacing:3px;font-size:1.45rem;text-shadow:2px 0 var(--red),-2px 0 var(--cyan)}.brand img{width:44px;height:44px;object-fit:contain;border-radius:50%}
-nav{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}nav a{padding:9px 13px;border:1px solid transparent;color:#dce4ee;font-size:.86rem;letter-spacing:1px;transition:.25s ease}nav a:hover,nav a.active{color:var(--green);border-color:var(--green);box-shadow:0 0 14px rgba(57,255,20,.22)}
-.social-mini{display:flex;gap:7px}.social-mini a{width:34px;height:34px;display:grid;place-items:center;border:1px solid rgba(0,245,255,.45);border-radius:6px;transition:.25s}.social-mini a:hover{transform:translateY(-2px);box-shadow:0 0 15px rgba(0,245,255,.35)}.social-mini svg{width:18px;height:18px;fill:currentColor}
-.hero{min-height:calc(100vh - 75px);display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:30px;padding:70px 8%;position:relative}.hero::after{content:"";position:absolute;width:45%;height:1px;right:8%;top:22%;background:linear-gradient(90deg,transparent,var(--red),transparent);box-shadow:0 0 12px var(--red)}
-.eyebrow{color:var(--cyan);letter-spacing:5px;font-weight:800;margin-bottom:10px}.hero h1{font-size:clamp(5rem,12vw,10rem);line-height:.78;letter-spacing:8px;font-weight:1000;text-shadow:5px 0 var(--red),-5px 0 var(--cyan),0 0 35px rgba(255,255,255,.12);animation:glitch 3.5s infinite steps(1)}
-@keyframes glitch{0%,92%,100%{transform:translate(0)}93%{transform:translate(4px,-2px)}94%{transform:translate(-5px,2px)}95%{transform:translate(2px,0)}}
-.motto{margin-top:28px;font-size:clamp(1rem,2vw,1.35rem);font-weight:800;letter-spacing:1.5px}.motto span:nth-child(1){color:var(--green)}.motto span:nth-child(2){color:var(--cyan)}.motto span:nth-child(3){color:var(--red)}
-.hero-description{max-width:650px;margin-top:22px;color:var(--muted);line-height:1.8;font-size:1.05rem}.buttons{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}.btn{padding:13px 20px;border:1px solid var(--cyan);color:var(--cyan);background:rgba(0,245,255,.035);border-radius:5px;font-weight:800;letter-spacing:.7px;transition:.25s ease}.btn:hover{color:#030507;background:var(--cyan);box-shadow:0 0 24px rgba(0,245,255,.55);transform:translateY(-2px)}.btn.green{border-color:var(--green);color:var(--green)}.btn.green:hover{background:var(--green);box-shadow:0 0 24px rgba(57,255,20,.45)}.btn.red{border-color:var(--red);color:var(--red)}.btn.red:hover{background:var(--red);box-shadow:0 0 24px rgba(255,23,68,.45)}
-.gallery-btn{display:inline-block;margin-top:25px;padding:13px 20px;border:1px solid var(--cyan);color:var(--cyan);background:rgba(0,245,255,.035);border-radius:5px;font-weight:800;letter-spacing:.7px;transition:.25s ease}.gallery-btn:hover{color:#030507;background:var(--cyan);box-shadow:0 0 24px rgba(0,245,255,.55);transform:translateY(-2px)}
-.hero-art{min-height:500px;display:grid;place-items:center;position:relative}.hero-art::before{content:"";position:absolute;width:85%;height:85%;background:linear-gradient(90deg,transparent 48%,rgba(0,245,255,.35) 49%,transparent 50%),linear-gradient(0deg,transparent 48%,rgba(255,23,68,.25) 49%,transparent 50%);opacity:.3;mask-image:radial-gradient(circle,black,transparent 68%)}.hero-logo{position:relative;width:min(90%,560px);max-height:560px;object-fit:contain;filter:drop-shadow(-14px 0 0 rgba(0,245,255,.28)) drop-shadow(14px 0 0 rgba(255,23,68,.28)) drop-shadow(0 0 28px rgba(0,245,255,.15));animation:float 5s ease-in-out infinite}@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
-.section{padding:80px 8%;border-top:1px solid rgba(255,255,255,.08)}.section h2{margin-bottom:14px;font-size:clamp(2rem,5vw,3.2rem);letter-spacing:2px;text-shadow:2px 0 var(--red),-2px 0 var(--cyan)}.section p{max-width:800px;color:var(--muted);line-height:1.8}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}.card{padding:25px;background:var(--panel);border:1px solid var(--line);border-radius:10px;transition:.25s ease}.card:hover{transform:translateY(-5px);border-color:var(--cyan);box-shadow:0 0 24px rgba(0,245,255,.13)}.card h3{margin-bottom:10px;color:var(--cyan)}
-.social-panel{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}.social-button{display:inline-flex;align-items:center;gap:9px;padding:13px 18px;border:1px solid rgba(255,255,255,.2);border-radius:6px;background:rgba(255,255,255,.025);transition:.25s}.social-button:hover{transform:translateY(-3px);border-color:var(--pink);box-shadow:0 0 20px rgba(255,20,147,.25)}footer{padding:28px 8%;text-align:center;color:#707a87;border-top:1px solid rgba(255,255,255,.1);font-size:.9rem}
-@media(max-width:900px){header{flex-wrap:wrap;justify-content:center}.hero{grid-template-columns:1fr;text-align:center;padding-top:55px}.hero-description{margin-left:auto;margin-right:auto}.buttons,.social-panel{justify-content:center}.hero-art{min-height:380px}.cards{grid-template-columns:1fr}}
-@media(max-width:600px){header{padding:12px 4%}.social-mini{display:none}nav{width:100%}nav a{padding:7px 9px;font-size:.74rem}.hero{padding:50px 6%}.hero h1{font-size:5rem;letter-spacing:3px}.hero-art{min-height:300px}.section{padding:60px 6%}}
-</style>
+    <title>MVD | Unknown // Unreadable // Unstoppable</title>
+
+    <!-- =========================
+         GOOGLE ANALYTICS
+    ========================== -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K0PM400KTY"></script>
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+        gtag('config', 'G-K0PM400KTY');
+    </script>
+
+    <style>
+
+        /* =========================
+           MVD COLOR SYSTEM
+        ========================== */
+
+        :root {
+            --cyan: #00f5ff;
+            --blue: #00aaff;
+            --green: #39ff14;
+            --red: #ff1744;
+            --pink: #ff1493;
+            --white: #f5f7ff;
+            --muted: #9aa4b2;
+
+            --bg: #030507;
+            --panel: rgba(8, 12, 18, 0.82);
+            --line: rgba(0, 245, 255, 0.25);
+        }
+
+
+        /* =========================
+           RESET
+        ========================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            min-height: 100vh;
+
+            color: var(--white);
+
+            background:
+                radial-gradient(
+                    circle at 75% 25%,
+                    rgba(255, 0, 60, 0.12),
+                    transparent 30%
+                ),
+                radial-gradient(
+                    circle at 25% 35%,
+                    rgba(0, 245, 255, 0.10),
+                    transparent 32%
+                ),
+                var(--bg);
+
+            font-family: Arial, Helvetica, sans-serif;
+
+            overflow-x: hidden;
+        }
+
+
+        /* =========================
+           SCANLINE EFFECT
+        ========================== */
+
+        body::before {
+            content: "";
+
+            position: fixed;
+            inset: 0;
+
+            pointer-events: none;
+
+            z-index: 20;
+
+            background:
+                repeating-linear-gradient(
+                    to bottom,
+                    rgba(255,255,255,0.018) 0px,
+                    rgba(255,255,255,0.018) 1px,
+                    transparent 2px,
+                    transparent 5px
+                );
+
+            opacity: 0.45;
+        }
+
+
+        /* =========================
+           LINKS
+        ========================== */
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+
+        /* =========================
+           TOP RGB LINE
+        ========================== */
+
+        .top-line {
+            height: 2px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    var(--green),
+                    var(--cyan),
+                    var(--red),
+                    var(--pink),
+                    var(--green)
+                );
+
+            box-shadow:
+                0 0 18px rgba(0,245,255,.7);
+        }
+
+
+        /* =========================
+           HEADER
+        ========================== */
+
+        header {
+            position: sticky;
+            top: 0;
+
+            z-index: 15;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 24px;
+
+            padding: 14px 6%;
+
+            background:
+                rgba(3, 5, 7, 0.9);
+
+            border-bottom:
+                1px solid rgba(255,255,255,.12);
+
+            backdrop-filter: blur(14px);
+        }
+
+
+        /* =========================
+           BRAND
+        ========================== */
+
+        .brand {
+            display: flex;
+            align-items: center;
+
+            gap: 12px;
+
+            font-weight: 900;
+            letter-spacing: 3px;
+
+            font-size: 1.45rem;
+
+            text-shadow:
+                2px 0 var(--red),
+                -2px 0 var(--cyan);
+        }
+
+        .brand img {
+            width: 44px;
+            height: 44px;
+
+            object-fit: contain;
+
+            border-radius: 50%;
+        }
+
+
+        /* =========================
+           NAVIGATION
+        ========================== */
+
+        nav {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            justify-content: center;
+
+            gap: 8px;
+        }
+
+        nav a {
+            padding: 9px 13px;
+
+            border: 1px solid transparent;
+
+            color: #dce4ee;
+
+            font-size: .86rem;
+
+            letter-spacing: 1px;
+
+            transition: .25s ease;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: var(--green);
+
+            border-color: var(--green);
+
+            box-shadow:
+                0 0 14px rgba(57,255,20,.22);
+        }
+
+
+        /* =========================
+           TOP RIGHT SOCIAL BUTTONS
+        ========================== */
+
+        .social-mini {
+            display: flex;
+            gap: 7px;
+        }
+
+        .social-mini a {
+            width: 34px;
+            height: 34px;
+
+            display: grid;
+            place-items: center;
+
+            border:
+                1px solid rgba(0,245,255,.45);
+
+            border-radius: 6px;
+
+            font-size: .82rem;
+
+            font-weight: 900;
+
+            transition: .25s;
+        }
+
+        .social-mini a:hover {
+            transform: translateY(-2px);
+
+            color: var(--cyan);
+
+            border-color: var(--cyan);
+
+            box-shadow:
+                0 0 15px rgba(0,245,255,.35);
+        }
+
+
+        /* =========================
+           HERO
+        ========================== */
+
+        .hero {
+            min-height:
+                calc(100vh - 75px);
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            align-items: center;
+
+            gap: 30px;
+
+            padding: 70px 8%;
+
+            position: relative;
+        }
+
+
+        /* =========================
+           HERO RED LINE
+        ========================== */
+
+        .hero::after {
+            content: "";
+
+            position: absolute;
+
+            width: 45%;
+            height: 1px;
+
+            right: 8%;
+            top: 22%;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    transparent,
+                    var(--red),
+                    transparent
+                );
+
+            box-shadow:
+                0 0 12px var(--red);
+        }
+
+
+        /* =========================
+           EYEBROW
+        ========================== */
+
+        .eyebrow {
+            color: var(--cyan);
+
+            letter-spacing: 5px;
+
+            font-weight: 800;
+
+            margin-bottom: 10px;
+        }
+
+
+        /* =========================
+           MAIN MVD TITLE
+        ========================== */
+
+        .hero h1 {
+            font-size:
+                clamp(5rem, 12vw, 10rem);
+
+            line-height: .78;
+
+            letter-spacing: 8px;
+
+            font-weight: 1000;
+
+            text-shadow:
+                5px 0 var(--red),
+                -5px 0 var(--cyan),
+                0 0 35px rgba(255,255,255,.12);
+
+            animation:
+                glitch 3.5s infinite steps(1);
+        }
+
+
+        /* =========================
+           GLITCH ANIMATION
+        ========================== */
+
+        @keyframes glitch {
+
+            0%,
+            92%,
+            100% {
+                transform: translate(0);
+            }
+
+            93% {
+                transform: translate(4px, -2px);
+            }
+
+            94% {
+                transform: translate(-5px, 2px);
+            }
+
+            95% {
+                transform: translate(2px, 0);
+            }
+        }
+
+
+        /* =========================
+           HERO DESCRIPTION
+        ========================== */
+
+        .hero-description {
+            max-width: 650px;
+
+            margin-top: 28px;
+
+            color: var(--muted);
+
+            line-height: 1.8;
+
+            font-size: 1.05rem;
+        }
+
+
+        /* =========================
+           BUTTON CONTAINER
+        ========================== */
+
+        .buttons {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 12px;
+
+            margin-top: 30px;
+        }
+
+
+        /* =========================
+           MAIN BUTTON STYLE
+        ========================== */
+
+        .btn {
+            display: inline-flex;
+
+            align-items: center;
+            justify-content: center;
+
+            padding: 13px 20px;
+
+            min-height: 46px;
+
+            border:
+                1px solid var(--cyan);
+
+            color: var(--cyan);
+
+            background:
+                rgba(0, 245, 255, .035);
+
+            border-radius: 5px;
+
+            font-weight: 800;
+
+            letter-spacing: .7px;
+
+            transition: .25s ease;
+        }
+
+        .btn:hover {
+            color: #030507;
+
+            background: var(--cyan);
+
+            box-shadow:
+                0 0 24px rgba(0,245,255,.55);
+
+            transform:
+                translateY(-2px);
+        }
+
+
+        /* =========================
+           HOME BUTTON
+        ========================== */
+
+        .btn.green {
+            border-color: var(--green);
+
+            color: var(--green);
+        }
+
+        .btn.green:hover {
+            color: #030507;
+
+            background: var(--green);
+
+            box-shadow:
+                0 0 24px rgba(57,255,20,.45);
+        }
+
+
+        /* =========================
+           PROJECT BUTTON
+        ========================== */
+
+        .btn.red {
+            border-color: var(--red);
+
+            color: var(--red);
+        }
+
+        .btn.red:hover {
+            color: #030507;
+
+            background: var(--red);
+
+            box-shadow:
+                0 0 24px rgba(255,23,68,.45);
+        }
+
+
+        /* =========================
+           GALLERY BUTTON
+        ========================== */
+
+        .gallery-btn {
+            border-color: var(--pink);
+
+            color: var(--pink);
+        }
+
+        .gallery-btn:hover {
+            color: #030507;
+
+            background: var(--pink);
+
+            box-shadow:
+                0 0 24px rgba(255,20,147,.45);
+        }
+
+
+        /* =========================
+           HERO LOGO
+        ========================== */
+
+        .hero-art {
+            min-height: 500px;
+
+            display: grid;
+
+            place-items: center;
+
+            position: relative;
+        }
+
+        .hero-art::before {
+            content: "";
+
+            position: absolute;
+
+            width: 85%;
+            height: 85%;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    transparent 48%,
+                    rgba(0,245,255,.35) 49%,
+                    transparent 50%
+                ),
+                linear-gradient(
+                    0deg,
+                    transparent 48%,
+                    rgba(255,23,68,.25) 49%,
+                    transparent 50%
+                );
+
+            opacity: .3;
+
+            mask-image:
+                radial-gradient(
+                    circle,
+                    black,
+                    transparent 68%
+                );
+        }
+
+        .hero-logo {
+            position: relative;
+
+            width:
+                min(90%, 560px);
+
+            max-height: 560px;
+
+            object-fit: contain;
+
+            filter:
+                drop-shadow(
+                    -14px 0 0 rgba(0,245,255,.28)
+                )
+                drop-shadow(
+                    14px 0 0 rgba(255,23,68,.28)
+                )
+                drop-shadow(
+                    0 0 28px rgba(0,245,255,.15)
+                );
+
+            animation:
+                float 5s ease-in-out infinite;
+        }
+
+
+        /* =========================
+           FLOAT ANIMATION
+        ========================== */
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-9px);
+            }
+        }
+
+
+        /* =========================
+           MVD IDENTITY SECTION
+        ========================== */
+
+        .section {
+            padding: 80px 8%;
+
+            border-top:
+                1px solid rgba(255,255,255,.08);
+        }
+
+        .section h2 {
+            margin-bottom: 14px;
+
+            font-size:
+                clamp(2rem, 5vw, 3.2rem);
+
+            letter-spacing: 2px;
+
+            text-shadow:
+                2px 0 var(--red),
+                -2px 0 var(--cyan);
+        }
+
+        .section-description {
+            max-width: 1000px;
+
+            color: var(--muted);
+
+            line-height: 1.8;
+
+            font-size: 1.08rem;
+        }
+
+
+        /* =========================
+           MVD SLOGAN
+           ONE CLEAN COLOR
+        ========================== */
+
+        .mvd-slogan {
+            margin-top: 28px;
+
+            color: var(--white);
+
+            font-weight: 800;
+
+            letter-spacing: 1.5px;
+
+            line-height: 2;
+
+            font-size: 1.05rem;
+        }
+
+
+        /* =========================
+           CARDS
+        ========================== */
+
+        .cards {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 18px;
+
+            margin-top: 30px;
+        }
+
+        .card {
+            padding: 25px;
+
+            background:
+                var(--panel);
+
+            border:
+                1px solid var(--line);
+
+            border-radius: 10px;
+
+            transition: .25s ease;
+        }
+
+        .card:hover {
+            transform:
+                translateY(-5px);
+
+            border-color:
+                var(--cyan);
+
+            box-shadow:
+                0 0 24px rgba(0,245,255,.13);
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+
+            color: var(--cyan);
+        }
+
+        .card p {
+            color: var(--muted);
+
+            line-height: 1.8;
+        }
+
+
+        /* =========================
+           SOCIAL PANEL
+        ========================== */
+
+        .social-panel {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 12px;
+
+            margin-top: 28px;
+        }
+
+        .social-button {
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 9px;
+
+            padding: 13px 18px;
+
+            border:
+                1px solid rgba(255,255,255,.2);
+
+            border-radius: 6px;
+
+            background:
+                rgba(255,255,255,.025);
+
+            transition: .25s;
+        }
+
+        .social-button:hover {
+            transform:
+                translateY(-3px);
+
+            border-color:
+                var(--pink);
+
+            box-shadow:
+                0 0 20px rgba(255,20,147,.25);
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        footer {
+            padding: 28px 8%;
+
+            text-align: center;
+
+            color: #707a87;
+
+            border-top:
+                1px solid rgba(255,255,255,.1);
+
+            font-size: .9rem;
+        }
+
+
+        /* =========================
+           TABLET
+        ========================== */
+
+        @media (max-width: 900px) {
+
+            header {
+                flex-wrap: wrap;
+
+                justify-content: center;
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+
+                text-align: center;
+
+                padding-top: 55px;
+            }
+
+            .hero-description {
+                margin-left: auto;
+
+                margin-right: auto;
+            }
+
+            .buttons,
+            .social-panel {
+                justify-content: center;
+            }
+
+            .hero-art {
+                min-height: 380px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .mvd-slogan {
+                text-align: center;
+            }
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================== */
+
+        @media (max-width: 600px) {
+
+            header {
+                padding: 12px 4%;
+            }
+
+            .social-mini {
+                display: none;
+            }
+
+            nav {
+                width: 100%;
+            }
+
+            nav a {
+                padding: 7px 9px;
+
+                font-size: .74rem;
+            }
+
+            .hero {
+                padding: 50px 6%;
+            }
+
+            .hero h1 {
+                font-size: 5rem;
+
+                letter-spacing: 3px;
+            }
+
+            .hero-art {
+                min-height: 300px;
+            }
+
+            .section {
+                padding: 60px 6%;
+            }
+
+            .buttons {
+                flex-direction: column;
+
+                align-items: stretch;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            .social-panel {
+                flex-direction: column;
+            }
+
+            .social-button {
+                justify-content: center;
+            }
+
+            .mvd-slogan {
+                font-size: .95rem;
+            }
+        }
+
+    </style>
 </head>
-<body>
-<div class="top-line"></div>
-<header>
-<a class="brand" href="index.html" aria-label="MVD Home"><img src="MVD-logo.png" alt="MVD logo"><span>MVD</span></a>
-<nav aria-label="Main navigation"><a class="active" href="index.html">HOME</a><a href="about.html">ABOUT</a><a href="projects.html">PROJECTS</a><a href="gallery.html">GALLERY</a><a href="contact.html">CONTACT</a></nav>
-<div class="social-mini">
-<a href="https://www.tiktok.com/@videw_dintharu" target="_blank" rel="noopener" aria-label="TikTok" title="TikTok"><svg viewBox="0 0 24 24"><path d="M16.6 3c.3 2.1 1.5 3.7 3.4 4.5v3.1c-1.4-.1-2.6-.5-3.7-1.2v6.2c0 4.1-2.6 6.4-6.2 6.4-3.2 0-5.7-2.2-5.7-5.4 0-3.4 2.7-5.8 6.1-5.8.4 0 .8 0 1.2.1v3.2c-.4-.1-.8-.2-1.2-.2-1.5 0-2.8 1-2.8 2.5 0 1.4 1 2.4 2.4 2.4 1.7 0 2.7-1 2.7-3.1V3h3.8z"/></svg></a>
-<a href="https://www.instagram.com/it_z_videw" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 3a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H7zm5 2.5A4.5 4.5 0 1 1 12 16.5 4.5 4.5 0 0 1 12 7.5zm0 3A1.5 1.5 0 1 0 12 13.5 1.5 1.5 0 0 0 12 10.5zM17.5 6.3a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4z"/></svg></a>
-<a href="https://github.com/mrVidew" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub"><svg viewBox="0 0 24 24"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.11.79-.25.79-.56v-2.03c-3.22.7-3.9-1.37-3.9-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.16.08 1.77 1.2 1.77 1.2 1.03 1.76 2.69 1.25 3.35.96.1-.75.4-1.25.73-1.54-2.57-.29-5.27-1.29-5.27-5.75 0-1.27.45-2.31 1.19-3.12-.12-.29-.52-1.48.11-3.08 0 0 .97-.31 3.18 1.19a11.1 11.1 0 0 1 5.8 0c2.21-1.5 3.18-1.19 3.18-1.19.63 1.6.23 2.79.11 3.08.74.81 1.19 1.85 1.19 3.12 0 4.47-2.71 5.46-5.29 5.75.41.36.78 1.07.78 2.16v3.2c0 .31.21.68.8.56A11.5 11.5 0 0 0 12 .5z"/></svg></a>
-</div></header>
-<main>
-<section class="hero"><div><div class="eyebrow">WELCOME TO</div><h1>MVD</h1><div class="motto"><span>UNKNOWN</span> // <span>UNREADABLE</span> // <span>UNSTOPPABLE</span></div><p class="hero-description">MVD is a personal creative identity built around technology, designing, computers, software, digital creativity and future-focused projects. Think. Create. Improve. Dominate.</p><div class="buttons"><a class="btn green" href="index.html">⌂ HOME</a><a class="btn" href="about.html">◉ ABOUT</a><a class="btn red" href="projects.html">▣ PROJECTS</a><a class="btn" href="contact.html">✉ CONTACT</a></div><a href="gallery.html" class="gallery-btn">🖼️ VIEW GALLERY</a></div><div class="hero-art"><img class="hero-logo" src="MVD-logo.png" alt="MVD logo"></div></section>
-<section class="section"><h2>THE MVD IDENTITY</h2><p>MVD is more than a name — it represents a mindset of creativity, technology, and constant progress. It is a personal identity built on turning ideas into reality, exploring new possibilities, and creating something unique. From digital design and software to ambitious projects and experiments, MVD is about learning, building, and pushing beyond limits.
 
-Unknown // Unreadable // Unstoppable.
-Think. Create. Improve. Dominate. ⚡</p><div class="cards"><div class="card"><h3>01 // CREATE</h3><p>Turn ideas into real digital creations and designs.</p></div><div class="card"><h3>02 // BUILD</h3><p>Learn technology, software and development by building.</p></div><div class="card"><h3>03 // IMPROVE</h3><p>Keep learning, keep experimenting and keep moving forward.</p></div></div><div class="social-panel"><a class="social-button" href="https://www.tiktok.com/@videw_dintharu" target="_blank" rel="noopener">♪ TikTok</a><a class="social-button" href="https://www.instagram.com/it_z_videw" target="_blank" rel="noopener">◎ Instagram</a><a class="social-button" href="https://github.com/mrVidew" target="_blank" rel="noopener">⌘ GitHub</a></div></section>
-</main><footer>© 2026 MVD</footer>
-</body></html>
+
+<body>
+
+    <!-- =========================
+         RGB TOP LINE
+    ========================== -->
+
+    <div class="top-line"></div>
+
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header>
+
+        <a
+            class="brand"
+            href="index.html"
+            aria-label="MVD Home"
+        >
+
+            <img
+                src="MVD-logo.png"
+                alt="MVD logo"
+            >
+
+            <span>MVD</span>
+
+        </a>
+
+
+        <!-- NAVIGATION -->
+
+        <nav aria-label="Main navigation">
+
+            <a
+                class="active"
+                href="index.html"
+            >
+                HOME
+            </a>
+
+            <a href="about.html">
+                ABOUT
+            </a>
+
+            <a href="projects.html">
+                PROJECTS
+            </a>
+
+            <a href="gallery.html">
+                GALLERY
+            </a>
+
+            <a href="contact.html">
+                CONTACT
+            </a>
+
+        </nav>
+
+
+        <!-- TOP RIGHT SOCIAL BUTTONS -->
+
+        <div class="social-mini">
+
+            <a
+                href="https://www.tiktok.com/@videw_dintharu"
+                target="_blank"
+                rel="noopener"
+                aria-label="TikTok"
+                title="TikTok"
+            >
+                ♪
+            </a>
+
+            <a
+                href="https://www.instagram.com/it_z_videw"
+                target="_blank"
+                rel="noopener"
+                aria-label="Instagram"
+                title="Instagram"
+            >
+                ◎
+            </a>
+
+            <a
+                href="https://github.com/mrVidew"
+                target="_blank"
+                rel="noopener"
+                aria-label="GitHub"
+                title="GitHub"
+            >
+                ⌘
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         MAIN
+    ========================== -->
+
+    <main>
+
+
+        <!-- =========================
+             HERO
+        ========================== -->
+
+        <section class="hero">
+
+
+            <!-- LEFT SIDE -->
+
+            <div>
+
+                <div class="eyebrow">
+                    WELCOME TO
+                </div>
+
+
+                <h1>
+                    MVD
+                </h1>
+
+
+                <p class="hero-description">
+
+                    MVD is a personal creative identity built around
+                    technology, designing, computers, software,
+                    digital creativity and future-focused projects.
+                    Think. Create. Improve. Dominate.
+
+                </p>
+
+
+                <!-- FIVE BUTTONS -->
+
+                <div class="buttons">
+
+                    <a
+                        class="btn green"
+                        href="index.html"
+                    >
+                        ⌂ HOME
+                    </a>
+
+
+                    <a
+                        class="btn"
+                        href="about.html"
+                    >
+                        ◉ ABOUT
+                    </a>
+
+
+                    <a
+                        class="btn red"
+                        href="projects.html"
+                    >
+                        ▣ PROJECTS
+                    </a>
+
+
+                    <a
+                        class="btn"
+                        href="contact.html"
+                    >
+                        ✉ CONTACT
+                    </a>
+
+
+                    <a
+                        class="btn gallery-btn"
+                        href="gallery.html"
+                    >
+                        🖼️ VIEW GALLERY
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT SIDE LOGO -->
+
+            <div class="hero-art">
+
+                <img
+                    class="hero-logo"
+                    src="MVD-logo.png"
+                    alt="MVD logo"
+                >
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             THE MVD IDENTITY
+        ========================== -->
+
+        <section class="section">
+
+            <h2>
+                THE MVD IDENTITY
+            </h2>
+
+
+            <p class="section-description">
+
+                MVD is more than a name — it represents a mindset of
+                creativity, technology, and constant progress. It is a
+                personal identity built on turning ideas into reality,
+                exploring new possibilities, and creating something unique.
+                From digital design and software to ambitious projects and
+                experiments, MVD is about learning, building, and pushing
+                beyond limits.
+
+            </p>
+
+
+            <!-- TWO LINES AT THE BOTTOM -->
+
+            <div class="mvd-slogan">
+
+                <div>
+                    Unknown // Unreadable // Unstoppable.
+                </div>
+
+                <div>
+                    Think. Create. Improve. Dominate. ⚡
+                </div>
+
+            </div>
+
+
+            <!-- =========================
+                 THREE CARDS
+            ========================== -->
+
+            <div class="cards">
+
+
+                <div class="card">
+
+                    <h3>
+                        01 // CREATE
+                    </h3>
+
+                    <p>
+                        Turn ideas into real digital creations
+                        and designs.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <h3>
+                        02 // BUILD
+                    </h3>
+
+                    <p>
+                        Learn technology, software and
+                        development by building.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <h3>
+                        03 // IMPROVE
+                    </h3>
+
+                    <p>
+                        Keep learning, keep experimenting
+                        and keep moving forward.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- =========================
+                 SOCIAL LINKS
+            ========================== -->
+
+            <div class="social-panel">
+
+                <a
+                    class="social-button"
+                    href="https://www.tiktok.com/@videw_dintharu"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    ♪ TikTok
+                </a>
+
+
+                <a
+                    class="social-button"
+                    href="https://www.instagram.com/it_z_videw"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    ◎ Instagram
+                </a>
+
+
+                <a
+                    class="social-button"
+                    href="https://github.com/mrVidew"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    ⌘ GitHub
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+        © 2026 MVD
+    </footer>
+
+
+</body>
+</html>
